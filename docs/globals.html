@@ -76,16 +76,48 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable"><a href="globals.html#svga" class="tsd-kind-icon">SVGA</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#parser" class="tsd-kind-icon">parser</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="globals.html#getdatetimer" class="tsd-kind-icon">get<wbr>Date<wbr>Timer</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#getlocalcache" class="tsd-kind-icon">get<wbr>Local<wbr>Cache</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#getsvga" class="tsd-kind-icon">getSVGA</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#gettimenum" class="tsd-kind-icon">get<wbr>Time<wbr>Num</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#loadsvga" class="tsd-kind-icon">loadSVGA</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#setlocalcache" class="tsd-kind-icon">set<wbr>Local<wbr>Cache</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#wait" class="tsd-kind-icon">wait</a></li>
 							</ul>
 						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="svga" class="tsd-anchor"></a>
+					<h3>SVGA</h3>
+					<div class="tsd-signature tsd-kind-icon">SVGA<span class="tsd-signature-symbol">:</span> <a href="globals.html#svga" class="tsd-signature-type">SVGA</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in svga.ts:1</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="parser" class="tsd-anchor"></a>
+					<h3>parser</h3>
+					<div class="tsd-signature tsd-kind-icon">parser<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Parser</span><span class="tsd-signature-symbol"> = new SVGA.Parser()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in svga.ts:2</li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -111,7 +143,7 @@
 					<a name="getlocalcache" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Local<wbr>Cache</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Local<wbr>Cache<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Local<wbr>Cache<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -123,10 +155,42 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>key: <span class="tsd-signature-type">any</span></h5>
+									<h5>key: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="getsvga" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> getSVGA</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">getSVGA<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, className<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, loops<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, clearsAfterStop<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Player</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in svga.ts:14</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>className: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>loops: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>clearsAfterStop: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Player</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -154,10 +218,33 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="loadsvga" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> loadSVGA</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">loadSVGA<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in svga.ts:4</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="setlocalcache" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> set<wbr>Local<wbr>Cache</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Local<wbr>Cache<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Local<wbr>Cache<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -169,7 +256,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>key: <span class="tsd-signature-type">any</span></h5>
+									<h5>key: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -180,7 +267,7 @@
 					<a name="wait" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> wait</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">wait<span class="tsd-signature-symbol">(</span>ms<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">wait<span class="tsd-signature-symbol">(</span>ms<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -194,7 +281,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>ms: <span class="tsd-signature-type">any</span></h5>
+									<h5>ms: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
 										</div>
@@ -226,6 +313,12 @@
 					<li class=" tsd-kind-class">
 						<a href="classes/timer.html" class="tsd-kind-icon">Timer</a>
 					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#svga" class="tsd-kind-icon">SVGA</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#parser" class="tsd-kind-icon">parser</a>
+					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#getdatetimer" class="tsd-kind-icon">get<wbr>Date<wbr>Timer</a>
 					</li>
@@ -233,7 +326,13 @@
 						<a href="globals.html#getlocalcache" class="tsd-kind-icon">get<wbr>Local<wbr>Cache</a>
 					</li>
 					<li class=" tsd-kind-function">
+						<a href="globals.html#getsvga" class="tsd-kind-icon">getSVGA</a>
+					</li>
+					<li class=" tsd-kind-function">
 						<a href="globals.html#gettimenum" class="tsd-kind-icon">get<wbr>Time<wbr>Num</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#loadsvga" class="tsd-kind-icon">loadSVGA</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#setlocalcache" class="tsd-kind-icon">set<wbr>Local<wbr>Cache</a>
