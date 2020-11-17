@@ -79,12 +79,13 @@
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable"><a href="globals.html#svga" class="tsd-kind-icon">SVGA</a></li>
-								<li class="tsd-kind-variable"><a href="globals.html#parser" class="tsd-kind-icon">parser</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#svgaparser" class="tsd-kind-icon">svga<wbr>Parser</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function"><a href="globals.html#debounce" class="tsd-kind-icon">debounce</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#getdatetimer" class="tsd-kind-icon">get<wbr>Date<wbr>Timer</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#getlocalcache" class="tsd-kind-icon">get<wbr>Local<wbr>Cache</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#getsvga" class="tsd-kind-icon">getSVGA</a></li>
@@ -110,18 +111,62 @@
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable">
-					<a name="parser" class="tsd-anchor"></a>
-					<h3>parser</h3>
-					<div class="tsd-signature tsd-kind-icon">parser<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Parser</span><span class="tsd-signature-symbol"> = new SVGA.Parser()</span></div>
+					<a name="svgaparser" class="tsd-anchor"></a>
+					<h3>svga<wbr>Parser</h3>
+					<div class="tsd-signature tsd-kind-icon">svga<wbr>Parser<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Parser</span><span class="tsd-signature-symbol"> = new SVGA.Parser()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in svga.ts:2</li>
+							<li>Defined in svga.ts:3</li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="debounce" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> debounce</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">debounce<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span>, wait<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, immediate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in ui.ts:6</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>防连点</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fn: <span class="tsd-signature-type">Function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>点击处理方法</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> wait: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 2000</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>等待时间，单位毫秒，默认2000</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> immediate: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">(Anonymous function)</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="getdatetimer" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Date<wbr>Timer</h3>
@@ -172,22 +217,46 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in svga.ts:14</li>
+									<li>Defined in svga.ts:21</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>加载一个svga</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>资源URL</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>className: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>挂载元素的class name</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>loops: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>播放次数。默认为空，循环播放。</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>clearsAfterStop: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Player</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -227,7 +296,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in svga.ts:4</li>
+									<li>Defined in svga.ts:5</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -317,7 +386,10 @@
 						<a href="globals.html#svga" class="tsd-kind-icon">SVGA</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#parser" class="tsd-kind-icon">parser</a>
+						<a href="globals.html#svgaparser" class="tsd-kind-icon">svga<wbr>Parser</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#debounce" class="tsd-kind-icon">debounce</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#getdatetimer" class="tsd-kind-icon">get<wbr>Date<wbr>Timer</a>

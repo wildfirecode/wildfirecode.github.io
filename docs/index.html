@@ -87,6 +87,38 @@
 }
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Pageindex;
 </code></pre>
+				<a href="#防连点-debounce" id="防连点-debounce" style="color: inherit; text-decoration: none;">
+					<h1>防连点 debounce</h1>
+				</a>
+				<p>js</p>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> {debounce } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;teddi&quot;</span>;</code></pre>
+				<p>html</p>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{debounce(clickHandler)}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+or 
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{debounce(clickHandler,3000)}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+				<p><a href="./globals.html#debounce">了解更多，请点击查看API</a></p>
+				<a href="#快速装载一个svga动画-getsvga" id="快速装载一个svga动画-getsvga" style="color: inherit; text-decoration: none;">
+					<h1>快速装载一个svga动画 getSVGA</h1>
+				</a>
+				<p>加载一个循环播放的动画，比如角色待机动画。</p>
+				<p>html</p>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;svga-placeholder&quot;</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+				<p>js</p>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> {getSVGA } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;teddi&quot;</span>;
+<span class="hljs-keyword">const</span> url = <span class="hljs-string">&#x27;&#x27;</span>;
+getSVGA(url, <span class="hljs-string">&#x27;svga-placeholder&#x27;</span>);</code></pre>
+				<p>加载一个动画，它只播放一次，监听播放完成事件。一般用于角色动作切换。</p>
+				<p>html</p>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;svga-placeholder&quot;</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+				<p>js</p>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> {getSVGA} <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;teddi&quot;</span>;
+<span class="hljs-keyword">const</span> url = <span class="hljs-string">&#x27;&#x27;</span>;
+<span class="hljs-keyword">const</span> svga = <span class="hljs-keyword">await</span> getSVGA(url, <span class="hljs-string">&#x27;svga-placeholder&#x27;</span>,<span class="hljs-number">1</span>);<span class="hljs-comment">//加载动画</span>
+svga.startAnimation();
+svga.onFinished(<span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-comment">//单次动作播放完成，此时可以切回待机状态</span>
+});</code></pre>
+				<p><a href="./globals.html#getsvga">了解更多，请点击查看API</a></p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -112,7 +144,10 @@
 						<a href="globals.html#svga" class="tsd-kind-icon">SVGA</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#parser" class="tsd-kind-icon">parser</a>
+						<a href="globals.html#svgaparser" class="tsd-kind-icon">svga<wbr>Parser</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#debounce" class="tsd-kind-icon">debounce</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#getdatetimer" class="tsd-kind-icon">get<wbr>Date<wbr>Timer</a>
