@@ -93,7 +93,8 @@
 				<ul>
 					<li>防连点</li>
 					<li>svga</li>
-					<li>...</li>
+					<li>时间相关</li>
+					<li>net</li>
 				</ul>
 				<a href="#防连点" id="防连点" style="color: inherit; text-decoration: none;">
 					<h1>防连点</h1>
@@ -138,6 +139,19 @@ svga.onFinished(<span class="hljs-function">() =&gt;</span> {
 <span class="hljs-keyword">const</span> url = <span class="hljs-string">&#x27;&#x27;</span>;
 <span class="hljs-keyword">const</span> videoItem = <span class="hljs-keyword">await</span> loadSVGA(url);</code></pre>
 				<p><a href="./globals.html#loadsvga">了解更多，请点击查看API</a></p>
+				<a href="#net" id="net" style="color: inherit; text-decoration: none;">
+					<h1>net</h1>
+				</a>
+				<a href="#获取星速台token" id="获取星速台token" style="color: inherit; text-decoration: none;">
+					<h2>获取星速台token</h2>
+				</a>
+				<p>星速台相关工具，需要先引入。注意：如果是本地化项目需要定制px-token.min.js。</p>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;getTokenKey&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;//yun.duiba.com.cn/js-libs/px-token/0.0.4/px-token.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+				<p>用法</p>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> {getPxToken } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;teddi&quot;</span>;
+<span class="hljs-keyword">const</span> token = <span class="hljs-keyword">await</span> getPxToken();
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> API.doSign({token});</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -173,6 +187,9 @@ svga.onFinished(<span class="hljs-function">() =&gt;</span> {
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#getlocalcache" class="tsd-kind-icon">get<wbr>Local<wbr>Cache</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getpxtoken" class="tsd-kind-icon">get<wbr>PxToken</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#getsvga" class="tsd-kind-icon">getSVGA</a>
