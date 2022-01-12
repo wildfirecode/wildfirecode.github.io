@@ -13,14 +13,6 @@ object-assign
  */
 
 /*!
- * @pixi/app - v6.2.1
- * Compiled Tue, 21 Dec 2021 19:56:15 UTC
- *
- * @pixi/app is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-
-/*!
  * @pixi/constants - v6.2.1
  * Compiled Tue, 21 Dec 2021 19:56:15 UTC
  *
@@ -109,18 +101,18 @@ object-assign
  */
 
 /*!
- * @pixi/ticker - v6.2.1
+ * @pixi/runner - v6.2.1
  * Compiled Tue, 21 Dec 2021 19:56:15 UTC
  *
- * @pixi/ticker is licensed under the MIT License.
+ * @pixi/runner is licensed under the MIT License.
  * http://www.opensource.org/licenses/mit-license
  */
 
 /*!
- * @pixi/utils - v6.2.1
+ * @pixi/ticker - v6.2.1
  * Compiled Tue, 21 Dec 2021 19:56:15 UTC
  *
- * @pixi/utils is licensed under the MIT License.
+ * @pixi/ticker is licensed under the MIT License.
  * http://www.opensource.org/licenses/mit-license
  */
 
